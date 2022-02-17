@@ -11,3 +11,13 @@ app-square {
   border: 1px solid gray;
   aspect-ratio: 1;
 }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+
+  h2 {
+    margin: 0;
+  }
+}

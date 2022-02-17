@@ -1,8 +1,10 @@
 <h1 ngHeader>Current Player: {{ player }}</h1>
 
-<button nbButton outline (click)="newGame()">Start new Game</button>
+<div class="row">
+  <button nbButton outline (click)="newGame()">Start new Game</button>
 
-<h2 *ngIf="winner">Player {{ winner }} won the Game!</h2>
+  <h2 *ngIf="winner">Player {{ winner }} won the Game!</h2>
+</div>
 
 <main>
   <app-square

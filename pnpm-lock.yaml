@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@angular-devkit/build-angular': ~13.2.3
   '@angular/animations': ~13.2.0
+  '@angular/cdk': ^13.0.0
   '@angular/cli': ~13.2.3
   '@angular/common': ~13.2.0
   '@angular/compiler': ~13.2.0
@@ -12,8 +13,13 @@ specifiers:
   '@angular/platform-browser': ~13.2.0
   '@angular/platform-browser-dynamic': ~13.2.0
   '@angular/router': ~13.2.0
+  '@angular/service-worker': ~13.2.0
+  '@nebular/eva-icons': 9.0.1
+  '@nebular/theme': ^9.0.1
+  '@schematics/angular': ~13.2.3
   '@types/jasmine': ~3.10.0
   '@types/node': ^12.11.1
+  eva-icons: ^1.1.2
   jasmine-core: ~4.0.0
   karma: ~6.3.0
   karma-chrome-launcher: ~3.1.0
@@ -27,6 +33,7 @@ specifiers:
 
 dependencies:
   '@angular/animations': 13.2.2_@angular+core@13.2.2
+  '@angular/cdk': 13.2.3_56a876a0eaa54a305f19fe1fdbb2d569
   '@angular/common': 13.2.2_@angular+core@13.2.2+rxjs@7.5.4
   '@angular/compiler': 13.2.2
   '@angular/core': 13.2.2_rxjs@7.5.4+zone.js@0.11.4
@@ -34,14 +41,19 @@ dependencies:
   '@angular/platform-browser': 13.2.2_c64a13fde22b93b73524c2f285257034
   '@angular/platform-browser-dynamic': 13.2.2_9ae48879d51b4631516600e997a0571b
   '@angular/router': 13.2.2_35e62c822a25e6e13e3432fdf570f1e6
+  '@angular/service-worker': 13.2.2_e220c6e7eba277d095614033074f483c
+  '@nebular/eva-icons': 9.0.1_ddb193fed9e301bc27878ea721b09bac
+  '@nebular/theme': 9.0.1_b7d92709a7bb5b3e42bfc9aef01f52fb
+  eva-icons: 1.1.3
   rxjs: 7.5.4
   tslib: 2.3.1
   zone.js: 0.11.4
 
 devDependencies:
-  '@angular-devkit/build-angular': 13.2.3_03740ba320e80e50a193888def3a8b1e
+  '@angular-devkit/build-angular': 13.2.3_ae8175f7edff978a97af73f06b104891
   '@angular/cli': 13.2.3
   '@angular/compiler-cli': 13.2.2_fec9c70e8e07667bc8cff23fcf4c55d6
+  '@schematics/angular': 13.2.3
   '@types/jasmine': 3.10.3
   '@types/node': 12.20.46
   jasmine-core: 4.0.0
@@ -79,7 +91,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular/13.2.3_03740ba320e80e50a193888def3a8b1e:
+  /@angular-devkit/build-angular/13.2.3_ae8175f7edff978a97af73f06b104891:
     resolution: {integrity: sha512-cZ2gRcMRgW3t1WCeP+2D/wmr2M+BR/RICAh0wL9irIdypWAzIFt3Z2+2R/HmgAAxoEkdUMIfB9AnkYmwRVgFeA==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -110,6 +122,7 @@ packages:
       '@angular-devkit/build-webpack': 0.1302.3_4df292f2573ba77e77217391b9684f0a
       '@angular-devkit/core': 13.2.3
       '@angular/compiler-cli': 13.2.2_fec9c70e8e07667bc8cff23fcf4c55d6
+      '@angular/service-worker': 13.2.2_e220c6e7eba277d095614033074f483c
       '@babel/core': 7.16.12
       '@babel/generator': 7.16.8
       '@babel/helper-annotate-as-pure': 7.16.7
@@ -243,6 +256,21 @@ packages:
     dependencies:
       '@angular/core': 13.2.2_rxjs@7.5.4+zone.js@0.11.4
       tslib: 2.3.1
+    dev: false
+
+  /@angular/cdk/13.2.3_56a876a0eaa54a305f19fe1fdbb2d569:
+    resolution: {integrity: sha512-X7FH0eGwfK2HcAroYBrE7O9ehZ50k9+DoDV98xm1NRgezNfiQ2QxIdLQKhJv0bnnID+pGk4Tnb44RXUmgk5idw==}
+    peerDependencies:
+      '@angular/common': ^13.0.0 || ^14.0.0-0
+      '@angular/core': ^13.0.0 || ^14.0.0-0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/common': 13.2.2_@angular+core@13.2.2+rxjs@7.5.4
+      '@angular/core': 13.2.2_rxjs@7.5.4+zone.js@0.11.4
+      rxjs: 7.5.4
+      tslib: 2.3.1
+    optionalDependencies:
+      parse5: 5.1.1
     dev: false
 
   /@angular/cli/13.2.3:
@@ -392,6 +420,19 @@ packages:
       '@angular/core': 13.2.2_rxjs@7.5.4+zone.js@0.11.4
       '@angular/platform-browser': 13.2.2_c64a13fde22b93b73524c2f285257034
       rxjs: 7.5.4
+      tslib: 2.3.1
+    dev: false
+
+  /@angular/service-worker/13.2.2_e220c6e7eba277d095614033074f483c:
+    resolution: {integrity: sha512-bIjzK1+AvD/z6mQesWGCejBqY7YnOZjsb979CZ8Opul5ToQUm1n1NWISre1Hqexv46Wfql7RyLt2d/YJbjVnXw==}
+    engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0}
+    hasBin: true
+    peerDependencies:
+      '@angular/common': 13.2.2
+      '@angular/core': 13.2.2
+    dependencies:
+      '@angular/common': 13.2.2_@angular+core@13.2.2+rxjs@7.5.4
+      '@angular/core': 13.2.2_rxjs@7.5.4+zone.js@0.11.4
       tslib: 2.3.1
     dev: false
 
@@ -1637,6 +1678,36 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.11
     dev: true
 
+  /@nebular/eva-icons/9.0.1_ddb193fed9e301bc27878ea721b09bac:
+    resolution: {integrity: sha512-EXGfCZ4t0Z24xjKmLNT1BjxFcUeI3JUNerVaDFZ5vzt4+Ligelt7jLHjOpE3KXoX+FEuqINjihuy3mi+lk2Nhg==}
+    peerDependencies:
+      '@nebular/theme': 9.0.1
+      eva-icons: ^1.1.2
+    dependencies:
+      '@nebular/theme': 9.0.1_b7d92709a7bb5b3e42bfc9aef01f52fb
+      eva-icons: 1.1.3
+      tslib: 2.3.1
+    dev: false
+
+  /@nebular/theme/9.0.1_b7d92709a7bb5b3e42bfc9aef01f52fb:
+    resolution: {integrity: sha512-Mcj0nbfYeK68QAz+UixH90YLS6KdMY4plooiIGxHbDSf+dAAG3orpN20/nzzJYnCaVghmhcHAXoxqFEngxBRaw==}
+    peerDependencies:
+      '@angular/animations': ^13.0.0
+      '@angular/cdk': ^13.0.0
+      '@angular/common': ^13.0.0
+      '@angular/core': ^13.0.0
+      '@angular/router': ^13.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/animations': 13.2.2_@angular+core@13.2.2
+      '@angular/cdk': 13.2.3_56a876a0eaa54a305f19fe1fdbb2d569
+      '@angular/common': 13.2.2_@angular+core@13.2.2+rxjs@7.5.4
+      '@angular/core': 13.2.2_rxjs@7.5.4+zone.js@0.11.4
+      '@angular/router': 13.2.2_35e62c822a25e6e13e3432fdf570f1e6
+      rxjs: 7.5.4
+      tslib: 2.3.1
+    dev: false
+
   /@ngtools/webpack/13.2.3_9dca068b1419cdcbf292101f1e6687b4:
     resolution: {integrity: sha512-wooUZiV92QyoeFxkhqIwH/cfiAAAn+l8fEEuaaEIfJtpjpbShvvlboEVsqb28soeGiFJfLcmsZM3mUFgsG4QBQ==}
     engines: {node: ^12.20.0 || ^14.15.0 || >=16.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -2081,7 +2152,7 @@ packages:
       ajv:
         optional: true
     dependencies:
-      ajv: 8.9.0
+      ajv: 8.10.0
     dev: true
 
   /ajv-keywords/3.5.2_ajv@6.12.6:
@@ -3382,6 +3453,10 @@ packages:
     resolution: {integrity: sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=}
     engines: {node: '>= 0.6'}
     dev: true
+
+  /eva-icons/1.1.3:
+    resolution: {integrity: sha512-QBSEWNbEx1H0numXP1qgxKVCZHonRaky5ft4pGzQBcO4cy7mEja6TuJ8rc7BqX2pmkvetVQWKDH+DK/8y7GTag==}
+    dev: false
 
   /eventemitter-asyncresource/1.0.0:
     resolution: {integrity: sha512-39F7TBIV0G7gTelxwbEqnwhp90eqCPON1k0NwNfwhgKn4Co4ybUbj2pECcXT0B3ztRKZ7Pw1JujUUgmQJHcVAQ==}
@@ -5151,6 +5226,12 @@ packages:
     dependencies:
       parse5: 6.0.1
     dev: true
+
+  /parse5/5.1.1:
+    resolution: {integrity: sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /parse5/6.0.1:
     resolution: {integrity: sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==}
